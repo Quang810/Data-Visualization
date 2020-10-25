@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 400,
+  "height": 500,
+  "title": "Cereal nutritions",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Quang810/FIT3179/main/cereal.csv"
+  },
+  "params": [
+    {
+      "name": "Manufacturer_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "American Home Food Products",
+          "General Mills",
+          "Kelloggs",
+          "Nabisco",
+          "Post",
+          "Quaker Oats",
+          "Ralston Purina"
+        ],
+        "labels": [
+          "Show All",
+          "American Home Food Products",
+          "General Mills",
+          "Kelloggs",
+          "Nabisco",
+          "Post",
+          "Quaker Oats",
+          "Ralston Purina"
+        ],
+        "name": "Manufacturer Selection"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Manufacturer_selection == null || datum.mfr == Manufacturer_selection"
+    }
+  ],
+  "encoding": {
+    "x": {"field": "mfr", "type": "nominal", "title": "Calories per serving"},
+    "y": {
+      "field": "calories",
+      "type": "quantitative",
+      "title": "Calories per serving"
+    }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {"field": "mfr", "type": "nominal", "title": "Manufacturer"},
+        "tooltip": [
+          {"field": "mfr", "type": "nominal", "title": "Manufacturer"},
+          {
+            "field": "calories",
+            "type": "quantitative",
+            "title": "Average calories"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "top"},
+      "encoding": {
+        "text": {"field": "calories", "type": "quantitative"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['name'] == 'Mueslix Crispy Blend' || datum['name'] == 'Muesli Raisins; Peaches; & Pecans'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}
