@@ -12,16 +12,16 @@
 <h1>Multiple Visualisations</h1>
 
 <h2>Covid-19 cases visualization</h2>
-<div id="buble_chart"></div>
+<div id="geographic"></div>
 
 <h2>Average calories of cereal based on famous brands</h2>
 <div id="bar_chart"></div>
 
 <script type="text/javascript">
   
-  var vis1 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/tooltip_chart.vl.json";
+  var vis1 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/chipotle.vl.json";
   
-  vegaEmbed('#buble_chart', vis1).then(function(result) {
+  vegaEmbed('#geographic', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
