@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 600,
+  "title": "Chipotle",
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Quang810/FIT3179/main/america.geo.json",
+        "format": {"type": "topojson", "feature": "america"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgrey", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Quang810/FIT3179/main/chipotle_stores.csv"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "location", "type": "nominal"},
+          {"field": "state", "type": "nominal"},
+          {"field": "address", "type": "nominal"}
+        ],
+        "size": {"value": 10}
+      },
+      "mark": "circle"
+    }
+  ],
+  "config": {}
+}
