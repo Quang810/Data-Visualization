@@ -1,12 +1,12 @@
-Cause of death,Rank,Deaths,Percent of total deaths
-All Causes,0,2813503.00,100
-Diseases of heart,1,647457.00,23
-Malignant neoplasms,2,599108.00,21.3
-Accidents (unintentional injuries,3,169936.00,6
-Chronic lower respiratory disease,4,160201.00,5.7
-Cerebrovascular disease,5,146383.00,5.2
-Alzheimer disease,6,121404.00,4.3
-Diabetes mellitus ,7,83564.00,3
-nfluenza and pneumoni,8,55672.00,2
-"Nephritis, nephrotic syndrome and nephrosi",9,50633.00,1.8
-Intentional self-harm (suicide,10,47173.00,1.7
+Cause of death,Rank,Deaths,Percent of total deaths,Start
+All Causes,0,2813503.00,100,0
+Diseases of heart,1,647457.00,23,0
+Malignant neoplasms,2,599108.00,21.3,0
+Accidents (unintentional injuries,3,169936.00,6,0
+Chronic lower respiratory disease,4,160201.00,5.7,0
+Cerebrovascular disease,5,146383.00,5.2,0
+Alzheimer disease,6,121404.00,4.3,0
+Diabetes mellitus ,7,83564.00,3,0
+nfluenza and pneumoni,8,55672.00,2,0
+"Nephritis, nephrotic syndrome and nephrosi",9,50633.00,1.8,0
+Intentional self-harm (suicide,10,47173.00,1.7,0
