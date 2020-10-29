@@ -11,23 +11,50 @@
 
 <h1>Multiple Visualisations</h1>
 
-<h2>Covid-19 cases visualization</h2>
-<div id="geographic"></div>
+<h2>World Obesity Rate</h2>
+<div id="geographic2"></div>
 
-<h2>Average calories of cereal based on famous brands</h2>
-<div id="bar_chart"></div>
+<h2>Fastfood locations in the US</h2>
+<div id="geographic2"></div>
+  
+<h2>Fast food calories based on category</h2>
+<div id="piechart"></div>
+  
+<h2>Obesity based on genders</h2>
+<div id="barchart"></div>
+  
+<h2>Leading causes of death</h2>
+<div id="text"></div>
 
 <script type="text/javascript">
   
-  var vis1 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/chipotle.vl.json";
+  var vis1 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/world_obesity.vl.json";
   
   vegaEmbed('#geographic', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/Cereal.vl.json";
+  var vis2 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/US_Fastfood_restaurants.vl.json";
   
-  vegaEmbed('#bar_chart', vis2).then(function(result) {
+  vegaEmbed('#geographic2', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var vis3 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/Fastfood_calories.vl.json";
+  
+  vegaEmbed('#piechart', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   var vis4 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/obesity_gender.vl.json";
+  
+  vegaEmbed('#barchart', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+   var vis5 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/Causes%20of%20death%202017.vl.json";
+  
+  vegaEmbed('#text', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
