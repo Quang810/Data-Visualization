@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 400,
+  "height": {"step": 16},
+  "data": {
+    "url": "https://raw.githubusercontent.com/Quang810/FIT3179/main/Deaths%20and%20percentage%20of%20total%20deaths%20for%20the%2010%20leading%20causes%20of%20death%20United%20States%202017.csv"
+  },
+  "title": "Leading causes of death in US 2017",
+  "transform": [
+    {"calculate": "datum.Deaths/10000", "as": "deaths"},
+    {"filter": "datum.deaths < 70"}
+  ],
+  "encoding": {"y": {"field": "Rank", "type": "ordinal", "axis": null}},
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "#a6bddb"},
+      "encoding": {
+        "x": {"field": "deaths", "title": "Number of deaths"},
+        "x2": {"field": "Start"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "right", "x": 1},
+      "encoding": {
+        "text": {"field": "Rank", "type": "ordinal"},
+        "detail": {"aggregate": "count"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "x": 17},
+      "encoding": {
+        "text": {"field": "Cause of death"},
+        "detail": {"aggregate": "values"}
+      }
+    }
+  ],
+  "config": {}
+}
