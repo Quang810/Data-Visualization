@@ -58,9 +58,9 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "x": 450,
-        "y": 40,
-        "fontSize": 14,
+        "x": 150,
+        "y": 20,
+        "fontSize": 12,
         "font": "Arial"
       },
       "encoding": {
