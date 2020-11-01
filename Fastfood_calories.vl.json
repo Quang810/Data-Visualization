@@ -70,13 +70,13 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "x": 512,
-        "y": 300,
+        "x": 360,
+        "y": 200,
         "fontSize": 12,
         "font": "Arial"
       },
       "encoding": {
-        "text": {"value": "Burritos has highest calories per serving"}
+        "text": {"value": "Burritos: highest calories"}
       }
     },
     {
@@ -84,12 +84,12 @@
         "type": "text",
         "align": "left",
         "baseline": "middle",
-        "x": 480,
-        "y": 220,
+        "x": 340,
+        "y": 130,
         "fontSize": 12,
         "font": "Arial"
       },
-      "encoding": {"text": {"value": "Burgers has highest fat per serving"}}
+      "encoding": {"text": {"value": "Burgers: highest fat"}}
     }
   ],
   "config": {}
