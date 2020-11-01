@@ -6,55 +6,111 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<h1>Obesity trend in the US</h1>
+  <div class="page">
 
-<h2>World Obesity Rate</h2>
-<div id="geographic"></div>
+   <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Obesity trend in the US</h1>
+        <p>This page demonstrates the obesity trending in America, potential related factors, and consequences of overweight</p>
+      </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>World Obesity Rate</h2>
+            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis1" class="vis-container"></div>
+        </div>
+    </div>
+
+div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis2"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Fastfood restaurant locations in the US</h2>
+            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          </div>
+        </div>
   
-<h2>Fastfood restaurant locations in the US</h2>
-<div id="geographic2"></div>
+<div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>Average calories of popular fastfood categories</h2>
+            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+    </div>
+
+div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis4"  class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Obesity rate in the US based on genders</h2>
+            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          </div>
+        </div>
+    
+<div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <h2>Death leading causes in the US</h2>
+            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-2-3">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+    </div>
   
-<h2>Average calories of popular fastfood categories</h2>
-<div id="piechart"></div>
-  
-<h2>Obesity rate in the US based on genders</h2>
-<div id="linechart"></div>
-  
-<h2>Death leading causes in the US</h2>
-<div id="text"></div>
 
 <script type="text/javascript">
   
   var vis1 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/world_obesity.vl.json";
   
-  vegaEmbed('#geographic', vis1).then(function(result) {
+  vegaEmbed('#vis1', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
   var vis2 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/US_Fastfood_restaurants.vl.json";
   
-  vegaEmbed('#geographic2', vis2).then(function(result) {
+  vegaEmbed('#vis2', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
   var vis3 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/Fastfood_calories.vl.json";
   
-  vegaEmbed('#piechart', vis3).then(function(result) {
+  vegaEmbed('#vis3', vis3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
   var vis4 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/obesity_gender.vl.json";
   
-  vegaEmbed('#linechart', vis4).then(function(result) {
+  vegaEmbed('#vis4', vis4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
   var vis5 = "https://raw.githubusercontent.com/Quang810/FIT3179/main/Causes%20of%20death%202017.vl.json";
   
-  vegaEmbed('#text', vis5).then(function(result) {
+  vegaEmbed('#vis5', vis5).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
