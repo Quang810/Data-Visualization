@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "List of countries by obesity rate",
-  "width": 400,
-  "height": 200,
+  "width": 500,
+  "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/Quang810/FIT3179/main/world.geo.json",
